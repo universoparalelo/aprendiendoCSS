@@ -1,0 +1,33 @@
+/*
+propiedades de texto
+
+font-size:  tamaño;
+font-family: tipo de la fuente;
+line-height: centrado de la letra; numero simple nms
+font-weight: grosor de la linea; numero sin vector
+font-stretch: ancho de la letra;
+color: red;
+*/
+
+h1 {
+	font-size: 3em;
+	font-family: Arial;
+	line-height: 3;
+	font-weight: 900;
+	color: #000;
+}
+
+/*tipografias externas
+google fonts
+se copia el link en html en el head
+y luego se agrega el nombre del estilo en css
+*/
+
+.titulo--h2 {
+	font-family: 'Glory', sans-serif;
+}
+
+#id {
+	font-family: 'Glory', sans-serif;
+	font-weight: 600;	
+}

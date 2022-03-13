@@ -1,0 +1,67 @@
+/*
+PSEUDO-ELEMENTOS
+es un elemento que no es un elemento--SoyDalto2020
+	::first-line   		| BLOCK
+	::first-letter 		| BLOCK
+	::placeholder
+	::after		| HIJOS - CONTENT - (NECESARIO) - INLINE
+	::before	| HIJOS - CONTENT - (NECESARIO) - INLINE
+	::selection
+*/
+* {
+	font-size: 20px;
+}
+
+.texto {
+	margin: 1em;
+}
+
+.texto::first-letter {
+	color: red;
+	font-size: 2em;
+}
+
+.texto::first-line {
+	color: blue;
+}
+
+form {
+	margin: 100px auto;
+	display: block;
+	background: grey;
+	padding: 100px;
+	width: 50%;
+}
+
+input::placeholder {
+	color: greenyellow;
+	font-size: 1.5em;
+	background-color: black;
+}
+
+input {
+	padding: 10px;
+	width: 100%;
+}
+
+p::selection {
+	color: white;
+	background: black;
+}
+
+input::selection {
+	color: white;
+	background: black;
+}
+
+.letra::before {
+	content: "Me suscribi";
+	color: green;
+	background: grey;
+}
+
+.letra::after {
+	content: "universoparalelo22";
+	color: orange;
+	background: blue;
+}

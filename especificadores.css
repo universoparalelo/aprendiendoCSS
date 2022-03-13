@@ -1,0 +1,28 @@
+/*
+jerarquias en CSS
+
+1......!important......
+2....estilos de linea....
+3...identificadosres...
+4..clases,pseudo-clases,atributos..
+5.elementos,pseudo-elementos.
+*/
+
+#id {
+	color: blue;
+}
+
+p {
+	color: yellow !important
+}
+
+.clase {
+	color: grey;
+}
+
+[queOnda="khetepasa"]{
+	color: red;
+}
+
+
+

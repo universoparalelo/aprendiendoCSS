@@ -1,0 +1,37 @@
+/*
+----VARIABLES----
+
+variables globales: 
+
+:root {
+	--name: #fef;
+}
+
+declara dentro del selector al cual le queremos aplicar
+
+ background: var(--name);
+*/
+ 
+:root {
+	--color-naranja: #f94;
+}
+
+div {
+	padding: 30px;
+	height: 150px;
+	width: 150px;
+}
+
+.content {
+	background: #678;
+}
+
+.content-2 {
+	background: #ed7;
+}
+
+.content-3 {
+	background: var(--color-naranja);
+}
+
+

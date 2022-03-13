@@ -1,0 +1,75 @@
+/*
+Para convertir los elementos bloque a elementos linea
+display: inline;
+
+Para convertir los elementos en linea a bloques
+display: block;
+
+Propiedades de las cajas: 
+
+*Padding: distancia entre los bordes de la caja y el texto;
+tambien podemos agregar padding individualmente, por borde;
+padding-left: ;
+padding-right: ;
+padding-bottom: ;
+padding-top: ;
+padding: 20px 10px; //estamos usando dos coordenadas 
+					primero el eje y(top-bottom)
+					luego el eje x(left-right)
+padding: 10px 20px 30px 40px; //estamos usando los 4 ejes
+								(top-right-bottom-left)
+
+*Box-sizing: border-box;
+la caja se amolde no importa que al tamaño que le digamos
+por ej: 
+height: 100px;
+widht: 100px;
+
+*Box-sizing: content-box;
+la caja agrega el padding y el tamaño que escogimos
+
+*Text-align: center;
+texto centrado
+
+*Margin: es la separacion entre cajas;
+
+*Border-radius: borde redondeado;
+
+*Border: el-tamaño-del-borde el-estilo el-color;
+ej: 10px solid blue;
+aparte de solid hay: groove,dashed,etc;
+
+BOX MODEL
+content: line-heigth;
+padding: padding;
+border: border;
+margin: margin;
+//hay una linea de jerarquia
+
+*box-shadow: permite darle sombra a una caja;
+box-shadow: tamaño-eje-x tamaño-eje-y desenfoque borde color;
+box-shadow: 2px 4px 15px 0 #000;
+
+*text-shadow: lo mismo pero con el texto;
+no tiene la propiedad de borde nomas
+text-shadow: 2px 4px 15px #fff;
+
+*transform: rotate(90deg);
+para rotar
+
+*/
+
+h2 {
+	display: inline-block;
+	background-color: #CD5C5C;
+	padding: 20px 100px;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 10px;
+	border-radius: 0.5em;
+	border: 3px solid #5F0D0D;
+	box-shadow: 20px 15px 15px 0 #000;
+	text-shadow: 5px 5px 4px #5F0D0D;
+	transform: rotate(0deg);
+}
+

@@ -1,0 +1,164 @@
+/*
+GRID AREAS
+
+GRID-TEMPLATE-AREAS: 
+	"header header header"
+	"aside  main    main"
+	"aside  main    main"
+	"footer footer footer"
+
+---AREAS EN GRID---
+--AL GRID CONTAINER--
+grid-template-areas:  "nombre/s de area/s";
+
+--AL GRID ITEM--
+grid-area: "nombre del area";
+
+-----NOMBRES A LAS LINEAS-----
+[line-name]
+se puede reemplazar en: GRID-ROW | GRID-COLUMN;
+
+-----SHORTHAND-----
+
+-Grid-template: row / column (Grid-container);
+-Grid-template: area unidad;
+*/
+
+body {
+	font-size: 20px;
+}
+
+.grid-container {
+	display: grid;
+	margin: 10px;
+	background: #444;
+	grid-template-areas: 
+	"header header header"
+	"aside main main"
+	"aside main main"
+	"aside main main"
+	"aside main main"
+	"footer footer footer";
+	height: auto;
+	grid-template-rows: repeat(auto-fill,1fr);
+	border: 4px solid #000;
+}
+
+.grid-header {
+	background: blue;
+	grid-area: header;
+	padding: 5px;
+}
+
+.grid-aside {
+	background: yellow;
+	grid-area: aside;
+	padding: 5px;
+}
+
+.grid-main {
+	background: red;
+	grid-area: main;
+	padding: 5px;
+}
+
+.grid-footer {
+	background: green;
+	grid-area: footer;
+}
+
+.grid-header nav {
+	height: 100%;
+}
+
+.grid-header nav ul li {
+	list-style: none;
+}
+
+.grid-header nav ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.grid-header nav ul:first-child li {
+ 	display: inline-block;
+}
+
+.grid-header nav ul:nth-child(2) li {
+ 	background: #00a;
+}
+
+.grid-header nav ul:nth-child(2) li a {
+ 	color: #000;
+}
+
+.grid-header nav ul:nth-child(2) li:nth-child(3) a {
+ 	color: #a00;
+}
+
+.grid-header nav ul:nth-child(2) li:nth-child(3) a:hover {
+ 	color: #a00;
+ 	background: #000;
+}
+
+.grid-header nav ul:nth-child(3) li {
+ 	display: inline-block;
+}
+
+.grid-header nav ul:nth-child(3) {
+ 	text-align: right;
+ 	
+}
+
+.grid-aside nav ul li {
+	list-style: none;
+}
+
+.grid-aside nav ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.grid-footer nav ul li {
+	display: inline-block;
+	list-style: none;
+}
+
+.grid-footer nav ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.container {
+	display: grid;
+	grid-template-rows: 
+		[f-line]
+		150px
+		[s-line]
+		150px
+		[t-line]
+		150px
+		[l-line];
+	grid-template-columns:
+		[f-line]
+		150px
+		[s-line]
+		150px
+		[t-line]
+		150px
+		[l-line]; 
+	border: 3px solid #000;
+	grid-auto-flow: column;
+	grid-auto-columns: 150px;
+}
+
+.item {
+	background: #aaa;
+	border: 1px solid #000;
+}
+
+.item:first-child {
+	background: #a00;
+	grid-row: f-line / t-line;
+	grid-column: span 2;
+}

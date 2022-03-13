@@ -1,0 +1,12 @@
+form {
+	display: inline-block;
+	background: #888;
+	padding: 20px;
+	margin: 20px;
+}
+
+input {
+	display: block;
+	margin: 5px;
+}
+

@@ -1,0 +1,16 @@
+/*
+CURSOR
+ para ver estilos ir a pagina: ;
+ https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor
+*/
+* {
+	font-size: 20px;
+	font-family: 'Glory', sans-serif;
+}
+
+div {
+	background: #FFC300;
+	width: 200px;
+	height: 300px;
+	cursor: all-scroll;
+}

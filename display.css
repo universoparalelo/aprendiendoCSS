@@ -1,0 +1,28 @@
+/*
+DISPLAY
+	BLOCK
+	INLINE
+
+	INLINE-BLOCK
+
+	FLEX
+	GRID
+
+	INLINE-FLEX
+	INLINE-GRID
+*/
+
+* {
+	font-family: ;
+	font-weight: ;
+	font-size: ;
+}
+
+b {
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	margin: 10px;
+	border: 5px solid black;
+	background: yellowgreen;
+}

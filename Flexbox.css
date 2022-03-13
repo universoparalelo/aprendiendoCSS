@@ -1,0 +1,133 @@
+/*
+FLEXBOX
+cajas flexibles
+
+CONTENEDOR - CONTENIDO
+
+FLEX CONTAINER - FLEX ITEM
+
+MAIN AXIS (MAIN START - MAIN END)
+
+CROSS AXIS (CROSS START - CROSS END)
+
+::PROPIEDADES::
+Flex-direction: row, column, row-reverse, column-reverse;
+Flex-Wrap:  no-wrap - wrap - wrap-reverse;
+Flex-flow: flex-direction flex-wrap;
+Justify-content: center, space-around, space-evenly, space-between (main axis);
+Align-items: flex-start, center, flex-end, stretch, baseline (cross axis);
+Align-content: " " " ";
+
+::PROPIEDADES DE LOS ITEMS::
+ALIGN-SELF (Cross Axis)
+
+::FUNCIONAMIENTO DEL MARGIN::
+Margin: (direction) auto->margin - contenedor - tamaño de la caja en el eje en el que corre;
+
+FLEX-GROW: 	(espacio asignado sobrante / grows)(Main Axis);
+FLEX-SHRINK: espacio que cede (Main Axis);
+FLEX-BASIS: medicion antes de encogerse. en Auto (defect value), agarra el width, y sino tiene mas prioridades (Main Axis);
+
+FLEX: FLEX-GROW, FLEX-SHRINK, FLEX-BASIS;
+(al menos el primer parametro obligatorio)
+ORDER: (como el index z, pero en el eje en
+el que apunta el main axis);
+*/
+
+* {
+	font-size: 24px;
+}
+
+
+.container-flex {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.container-item1 {
+	padding: 20px;
+	margin: 5px;
+	background: #48e;
+	color: #eee;
+	flex-basis: 250px;
+	flex-grow: 1;
+}
+
+.container-item2 {
+	padding: 20px;
+	margin: 5px;
+	background: #48e;
+	color: #eee;
+	flex-basis: 250px;
+	flex-grow: 1;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	/*flex-flow: row-reverse wrap;*/
+}
+
+.item {
+	background: #0cc;
+	height: 200px;
+	width: 200px;
+	margin: 10px;
+}
+
+.gray {
+	background: gray;
+}
+
+.green {
+	background: green;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: space-around;
+	align-content: baseline;
+	height: 100vh;
+}
+
+.item-container {
+	background: #999;
+	height: 150px;
+	width: 150px;
+	margin: 10px;
+}
+
+.gray {
+	background: gray;
+}
+
+.green {
+	background: green;
+}
+
+.contenedor {
+	display: flex;
+	height: 100vh;
+}
+
+.hijo {
+	min-width: 150px;
+	height: 200px;
+	background: #000;
+	margin: 10px;
+	align-self: flex-end;
+}
+
+.verde {
+	background: #3f0;
+	flex-grow: 1;
+}
+
+.naranja {
+	background: #d80;
+	flex-grow: 1.5;
+}

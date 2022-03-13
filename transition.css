@@ -1,0 +1,74 @@
+/*
+----TRANSITION----
+TRANSITION
+
+	-transition-property: property/ies - all - none;
+	-transition-duration: duration/s;
+	-transition-delay: delay/s;
+	-transition-timing-function: linear | ease | ease-in | ease-out | 
+ease-in-out | step-start | step-end | steps (int,start|end) | initial |
+inherit;
+	transition: ;
+*/
+
+.content {
+	background: #0a2;
+	height: 300px;
+	width: 100%;
+	padding: 30px;
+}
+
+.caja1 {
+	background: #062;
+	cursor: pointer;
+	height: 100px;
+	width: 100px;
+	transition-property: background;
+	transition-duration: 1s;
+	transition-delay: 3s;
+}
+
+.caja1:hover {
+	background: #700;
+}
+
+.content2 {
+	background: #888;
+	height: 100vh;
+	padding: 10px;
+}
+
+.caja {
+	background: #000;
+	color: yellowgreen;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	position: relative;
+	left: 0px;
+	transition-property: left, background;
+	transition-duration: 3s;
+	transition-timing-function: linear;
+}
+
+.content2:hover > .caja {
+	left: 1200px;
+	background: #fff;
+}
+
+.caja:nth-child(2) {
+	transition-timing-function: ease;
+}
+
+.caja:nth-child(3) {
+	transition-timing-function: ease-in-out;
+}
+
+.caja:nth-child(4) {
+	transition-timing-function: ease-in;
+}
+
+.caja:nth-child(5) {
+	transition-timing-function: ease-out;
+}
+

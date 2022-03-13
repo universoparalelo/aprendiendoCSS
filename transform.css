@@ -1,0 +1,99 @@
+/*
+----TRANSFORM----
+
+	transform:  translateX() - translateY() - 
+translate(x - x,y); (si usamos porcentajes, son porcentajes relativos al elemento) - recomendado
+	
+	transform: scale(xy - x,y) - scaleX() - scaleY();
+
+	transform: rotate(angleUnit) - rotateX(angleUnit) - 
+rotateZ(angleUnit) - rotate3D(angleUnit) || angleUnit - deg - grad - rad - turn;
+	
+	transform: skew(angleUnit);
+
+	clip-path: ;
+
+https://www.w3school.com/cssref/css3_pr_transform.asp
+*/
+
+* {
+	font-size: 32px;
+}
+
+.content {
+	background: #0a2;
+	padding: 30px;
+}
+
+.caja1 {
+	background: #062;
+	height: 120px;
+	width: 120px;
+	display: flex;
+	margin: 20px;
+	color: #fff;
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+	transition: all 1s;
+	transform: translateY(200px);
+}
+
+.caja1:hover {
+	transform: translateX(100%);
+	transform: skew(20deg);
+}
+
+.caja1:hover > b {
+	transform: skew(-30deg);
+}
+
+b {
+	margin: auto;
+	transition: all 1s;
+}
+
+
+/*
+.caja1:hover {
+	background: #700;
+}
+
+.content2 {
+	background: #888;
+	height: 100vh;
+	padding: 10px;
+}
+
+.caja {
+	background: #000;
+	color: yellowgreen;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	position: relative;
+	left: 0px;
+	transition-property: left, background;
+	transition-duration: 3s;
+	transition-timing-function: linear;
+}
+
+.content2:hover > .caja {
+	left: 1200px;
+	background: #fff;
+}
+
+.caja:nth-child(2) {
+	transition-timing-function: ease;
+}
+
+.caja:nth-child(3) {
+	transition-timing-function: ease-in-out;
+}
+
+.caja:nth-child(4) {
+	transition-timing-function: ease-in;
+}
+
+.caja:nth-child(5) {
+	transition-timing-function: ease-out;
+}
+

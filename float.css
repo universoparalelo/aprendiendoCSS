@@ -1,0 +1,45 @@
+/*
+FLOAT
+	LEFT
+	RIGHT
+si bien float funciona como un inline-block se lo puede utilizar para otras cosas
+ya esta casi en desuso usarlo de esa forma
+SOLO SE USA PARA ACOMODAR EL TEXTO ALREDEDOR DE UNA IMAGEN
+*/
+* {
+	font-size: 20px;
+}
+/*
+.cont div{
+	padding: 10px;
+	margin: 10px;
+	float: left;
+	width: 45%;
+}
+
+.primario{
+	background: lightgrey;
+}
+
+.secundario{
+	background: grey;
+}
+*/
+
+.contenedor {
+	width: 70%;
+	margin: auto;
+	margin-top: 20px;
+	background: lightgrey;
+	border: 5px solid black;
+}
+
+.contenedor img {
+	width: 40%;
+	float: right;
+	border: 5px solid grey;
+}
+
+.contenedor p {
+
+}

@@ -1,0 +1,217 @@
+/*
+GRID
+conceptos basicos
+	GRID CONTAINER
+	GRID ITEM
+	GRID CELL
+	GRID TRACKS (COLUMN Y ROW)
+	GRID AREA
+	GRID LINE (COLUMN LINE Y ROW LINE)
+
+-----PROPIEDADES-----
+GRID TEMPLATE ROWS (GRID-CONTAINER) medida de las filas
+GRID TEMPLATE COLUMNS (GRID-CONTAINER) medida de las columnas
+
+UNIDADES "AUTO" Y "FR"
+
+GRID-ROW-GAP (GRID CONTAINER) espacio entre filas
+GRID-COLUMN-GAP (GRID CONTAINER) espacio entre columnas
+GRID-GAP: ROW COLUMN (GRID CONTAINER); espacio entre filas y columnas
+
+GRID-ROW-START (GRID ITEM) donde empieza una celda en el eje x
+GRID-ROW-END (GRID ITEM) donde termina una celda en el eje x
+GRID-COLUMN-START (GRID ITEM) donde empieza una celda en el eje y
+GRID-COLUMN-END (GRID ITEM) donde termina una celda en el eje y
+GRID-ROW (GRID ITEM) eje x comienzo / eje x final
+GRID-COLUMN (GRID ITEM) eje y comienzo / eje y final
+
+REPEAT (CANTIDAD,TAMAÑO); (GRID CONTAINER)
+
+-----GRID IMPLICITO Y GRID EXPLICITO-----
+3 NUEVAS PROPIEDADES DEL GIRO IMPLICITO
+GRID-AUTO-ROWS (IGUAL QUE EL TEMPLATE) tamaño de las filas que sobran del template
+GRID-AUTO-COLUMNS (IGUAL QUE EL TEMPLATE) tamaño de las columnas que sobran del template
+GRID-AUTO-FLOW:  ROW(DEFAULT), COLUMN, DENSE; hacia adonde se dirigen las celdas que sobran
+
+-----GRID DINAMICO-----
+MINMAX() minimo y maximo tamaño de las celdas
+MIN-CONTENT las celdas se adaptan al minimo contenido
+MAX-CONTENT las celdas se adaptan al maximo contenido
+
+CANTIDAD
+
+AUTO-FILL cantidad de filas/columnas necesarias
+AUTO-FIT escala los elementos 
+
+-----ALINEACION Y CONTROL DE FLUJO-----
+diferencia con filas
+.la alineacion es dentro de cada celda y no alineacion total
+del flex container 
+.cada celda seria un "flex container"
+(Propiedades del flex container)
+JUSTIFY-ITEMS (horizontalmente)
+ALIGN-ITEMS (verticalmente)
+
+STRETCH (default) - START - CENTER - END
+
+PLACE-ITEMS: ALIGN-ITEMS JUSTIFY-ITEMS;
+
+-----ALINEACION DE FILAS Y COLUMNAS-----
+JUSTIFY-CONTENT (horizontalmente)
+ALIGN-CONTENT (verticalmente)
+STRETCH (default) - start - center - end
+mas los de flex: *space-around, *space-between, *space-evenly;
+
+-----APLICADO AL GRID ITEM-----
+.ALIGN-SELF
+.JUSTIFY-SELF
+.PLACE-SELF: ALIGN-SELF JUSTIFY-SELF;
+
+.STRETCH(default) - start - center - end
+
+.ORDER(igual que en el flex)
+
+*/
+
+body {
+	background: #555;
+	padding: 20px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-rows: 150px 150px 150px 150px;
+	grid-template-columns: 150px 150px 150px 1fr;
+	/*grid-template-columns: repeat (3,150px) 1 fr;*/
+	grid-gap: 10px;
+	border: 3px solid #000;
+	background: #444;
+	grid-auto-rows: 150px;
+	grid-auto-columns: 150px;
+	grid-auto-flow: dense;
+	/*grid-auto-flow: column;*/
+}
+
+.grid-items {
+	border: 2px solid #000;
+	background: #333;
+}
+
+.grid-items:first-child {
+	grid-column: 1 / 3;
+	grid-row: 1 / 3;
+	background: #900;
+}
+
+.grid-items:nth-child(2) {
+	background: #060;
+	grid-column: 3 / span 2;
+}
+
+.grid-items:nth-child(6) {
+	background: violet;
+	grid-column: 3 / 5;
+}
+
+.grid-items:nth-child(14) {
+	background: blue;
+	grid-column: 3 / 5;
+}
+
+.grid-container2 {
+	margin-top: 20px;
+	display: grid;
+	grid-template-rows: repeat(3,80px);
+	grid-template-columns: repeat(auto-fill,minmax(120px, 1fr));
+	grid-gap: 5px;
+	border: 3px solid #000;
+	background: #444;
+	grid-auto-rows: 80px;
+	grid-auto-columns: 150px;
+	grid-auto-flow: dense;
+	/*grid-auto-flow: column;*/
+}
+
+.grid-items2 {
+	border: 2px solid #000;
+	background: #333;
+}
+
+.grid-container3 {
+	margin-top: 20px;
+	display: grid;
+	grid-template-rows: repeat(3,1fr);
+	grid-template-columns: repeat(3,1fr);
+	border: 3px solid #000;
+	background: #444;
+	grid-auto-rows: 80px;
+	grid-auto-columns: 150px;
+	grid-auto-flow: dense;
+	/*justify-content: start;
+	align-content: start;*/
+	height: 500px;
+	justify-items: center;
+	align-items: center;
+	transition: all 2s;
+	/*grid-auto-flow: column;*/
+}
+
+/*.grid-container3:hover {
+	margin-top: 20px;
+	display: grid;
+	grid-template-rows: repeat(3,80px);
+	grid-template-columns: repeat(3,120px);
+	border: 3px solid #000;
+	background: #444;
+	grid-auto-rows: 80px;
+	grid-auto-columns: 150px;
+	grid-auto-flow: dense;
+	justify-content: end;
+	align-content: end;
+	height: 300px;
+	justify-items: end;
+	align-items: end;
+	/*grid-auto-flow: column;
+}*/
+
+.grid-items3 {
+	border: 1px solid #000;
+	background: #333;
+	padding: 40px;
+}
+
+.grid-items3:nth-child(1) {
+	align-self: start;
+	justify-self: start;
+	background: #a00;
+}
+
+.grid-items3:nth-child(3) {
+	justify-self: end;
+	align-self: start;
+	background: #a00;
+}
+
+.grid-items3:nth-child(4) {
+	justify-self: end;
+}
+
+.grid-items3:nth-child(5) {
+	background: #00a;
+}
+
+.grid-items3:nth-child(6) {
+	justify-self: start;
+}
+
+.grid-items3:nth-child(7) {
+	align-self: end;
+	justify-self: start;
+	background: #a00;
+}
+
+.grid-items3:nth-child(9) {
+	align-self: end;
+	justify-self: end;
+	background: #a00;
+}

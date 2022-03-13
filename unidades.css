@@ -1,0 +1,52 @@
+/*unidades
+
+se utilizan unidades relativas
+
+1em = 16px 
+
+por lo tanto vamos usar eso para que cuando la pagina se ve en el movil no se deformen los elementos, sino 
+que se acomodan
+
+pero si tenemos una caja que continen otras, entonces la caja mas grande puede expresarse en 
+pixeles y definir la escala del resto
+
+por ej tenemos una caja div que contiene otros h3 y al div le damos un tamaño de 10px y a los titulos h3
+le damos el tamaño de 3em, entonces el resultado sera de unos h3 de 30px.
+*/
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+.titulo--h2 {
+	font-size: 2em;
+}
+
+.subtitulo--div {
+	font-size: 20px;
+}
+
+.subtitulo--div--h3 {
+	font-size: 1em;
+}
+
+/*
+otra medida relativa es la viewport, es ajustable
+podemos decir que queremos que un titulo ocupe el 50% de toda la pantalla de ancho
+o el 25% de alto
+por ej: 
+
+h1 {
+	height: 25vh; el 25% de alto
+	width: 50vw; el 50% de ancho
+}
+*/
+
+h1 {
+	font-size: 50px;
+	background-color: black;
+	height: 40vh; 
+	width: 50vw; 
+}
+

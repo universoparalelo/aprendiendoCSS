@@ -1,0 +1,89 @@
+/*
+Outline: funciona como border pero sin afectar a la;
+caja que fue designada o al resto, no ocupa un espacio 
+fisico real, se superpone
+*outline: 5px solid red;
+
+**POSITION: posiciona los elementos;
+posibilidades de position: static,relative,
+absolute,fixed,sticky;
+*position: relative;
+le estamos dando cuatro propiedades a la caja: top-right-bottom-left;
+osea la estamos posicionando donde querramos sin importar donde o si hay algo debajo
+::Z-index: cuando se superponen muchas cajas se crea automaticamente un eje z;
+el elemento que mayor valor tenga en este eje será el primero que aparezca, el visible;
+z-index: numero;
+
+*z-index tiene un conflicto con padres y herencia
+darle -1 al hijo
+
+**Position: absolute;
+el objeto pasa a no ocupar un espacio en la pantalla, pero se sigue viendo
+el objeto que tenga absolute no reserva su lugar como en relative
+sino que permanece en su lugar pero sin ocuparlo realmente
+
+*opacity: transparencia de una caja;
+opacity: .5; .5=0.5
+
+**Position: fixed;
+funciona igual que absolute pero la caja se queda fija
+como en las publicidades de una pagina donde uno hace scroll
+pero la publicidad sigue quieta, re loco
+
+**Position: sticky;
+reserva su lugar
+funciona como fixed cuando la pantalla lo encontro
+y se posiciona como relative
+*/
+
+div {
+	display: block;
+	position: absolute;
+	font-size: 50px;
+}
+
+div div {
+	position: absolute;
+	height: 100px;
+	width: 150px;
+	margin: 1px;
+}
+
+.contenedor {
+	height: 450px;
+	width: 450px;
+	margin: 50px auto;
+	background: green;
+	position: relative;
+	border: 5px solid black;
+}
+
+.caja1 {
+	background: red;
+	top: 0;
+}
+
+.caja2 {
+	background: blue;
+	right: 0;
+}
+
+.caja3 {
+	background: yellow;
+	bottom: 0;
+}
+
+.caja4 {
+	background: violet;
+	right: 0;
+	bottom: 0;
+}
+
+.caja5 {
+	background: orange;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}

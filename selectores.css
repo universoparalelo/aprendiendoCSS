@@ -1,0 +1,72 @@
+/*
+selector {
+	propiedad: valor;
+}
+
+selector universal
+* {
+	color: red; //los colores se ponen con codigos hexadecimales o RGB
+}
+
+selector de tipo
+h1{
+	color: green;
+}
+
+selector de clases
+.cele{
+	color: purple;
+}
+en html se pondria dentro de la etiqueta class="nombre", ej: 
+<h1 class="cele">Esto es un titulo</h1>
+
+seleccion por atributo
+[min-50="40"]{
+	color: green;
+}
+cambia el elemento al cual pertenece el atributo
+en HTML:
+<h1 min-50="40">Holasas</h1>
+
+seleccion descendiente
+h2 p {
+	color: brown;
+}
+en HTML:
+<h2><p>Este es un titulo aunque no lo parezca</p></h2>
+
+seleccion por pseudo-clases
+h2: hover{
+	color: red;
+}
+cada vez que pasemos el mouse por el h2 va a cambiar de color
+
+* {
+	color: red;
+}
+
+h1{
+	color: green;
+}
+
+.cele{
+	color: purple;
+}
+
+[queOnda="khetepasa"]{
+	color: yellow;
+}
+
+h2 p {
+	color: black;
+}
+
+h2 p b {
+	color: blue;
+}
+
+
+.cele:hover{
+	color: red;
+}
+*/

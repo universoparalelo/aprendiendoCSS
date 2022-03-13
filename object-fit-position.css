@@ -1,0 +1,66 @@
+/*
+OBJECT-FIT
+	CONTAIN
+	COVER
+	NONE
+	SCALE-DOWN
+
+OBJECT-POSITION
+	LEFT
+	RIGHT
+	BOTTOM
+	TOP
+	coordenadas,numeros
+*/
+* {
+	font-size: 20px;
+	font-family: 'Glory', sans-serif;
+}
+
+.caja {
+	margin: 20px;
+	width: 200px;
+	height: 300px;
+	border: 3px solid black;
+}
+
+.caja img {
+	object-fit: contain;
+}
+
+.caja2 {
+	margin: 20px;
+	width: 400px;
+	height: 300px;
+	border: 3px solid black;
+}
+
+.caja2 img {
+	height: 295px;
+	width: 500px;
+	object-fit: cover;
+}
+
+.caja3 {
+	margin: 20px;
+	width: 400px;
+	height: 300px;
+	border: 3px solid black;
+}
+
+.caja3 img {
+	height: 295px;
+	width: 500px;
+	object-fit: none;
+}
+
+.caja4 {
+	margin: 20px;
+	width: 200px;
+	height: 300px;
+	border: 3px solid black;
+}
+
+.caja4 img {
+	object-fit: scale-down;
+}

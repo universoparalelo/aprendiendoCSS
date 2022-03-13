@@ -1,0 +1,56 @@
+/*
+FORMULARIO CON FLEXBOX
+
+*/
+
+.container {
+	display: flex;
+	background: #555;
+	margin: 20px 70px;
+	padding: 20px;
+	flex-wrap: wrap;
+	}
+
+.form {
+	margin: auto auto;
+	padding: 10px;
+	height: 100%;
+	order: 2;
+}
+
+.form-img img {
+	width: 300px;
+	border-radius: 50%;
+	order: 1;
+
+}
+
+.form-div {
+	margin: 7px 20px;
+}
+
+.form-input {
+	width: 100%;
+	padding: 10px;
+	background: #ccc;
+	border: none;
+	border-bottom: 3px solid #333;
+}
+
+textarea {
+	resize: none;
+}
+
+.form-div input[type="submit"] {
+	background-color: #888;
+}
+
+.form-div input[type="submit"]:hover {
+	background-color: #666;
+}
+
+.form-div input[type="submit"]:active {
+	background-color: #333;
+}
+
+

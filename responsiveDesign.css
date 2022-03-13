@@ -1,0 +1,160 @@
+/*
+<<<<<RESPONSIVE DESIGN>>>>>
+
+_Estructuras flexibles (contenedores flexibles, imagenes,
+videos flexibles)
+_Media Queries
+
+@Media se usa en consultas de medios para aplicar diferentes estilos
+para diferentes tipos / dispositivos de medios.
+
+_ancho y alta de la ventana grafica
+_ancho y alto del dispositivo
+_orientacion (¿la tableta/telefono esta en modo horizontal
+o vertical?)
+_resolucion
+
+	ALL
+		apto para todos los dispositivos
+	PRINT 
+		destinado a material impreso y visualización de documentos
+		en una pantalla en el modo de visita previa de impresion
+	SCREEN
+		destinado principalmente a las pantallas
+	SPEECH
+		destinado a sintetizadores de voz
+
+Operadores AND | OR
+orientacion:  LANDSCAPE Y PORTRAIT;
+
+
+*/
+
+p {
+	font-size: 40px;
+	background: #aaa;
+}
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+	p {
+		background: #999;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+	p {
+		background: #777;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+	p {
+		background: #555;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+	p {
+		background: #333;
+	}
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+	p {
+		background: #111;
+		color: #fff;
+	}
+}
+
+
+.content {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	font-size: 32px;
+}
+
+.header, .main, .aside, .footer {
+	padding: 20px;
+}
+
+.header {
+	background: lightblue;
+	flex-basis: 60px;
+}
+
+.main {
+	background: slateblue;
+	flex-basis: 300px;
+	flex-grow: 2;
+	flex-shrink: 0;
+}
+
+.aside {
+	background: darkslateblue;
+	flex-basis: 200px;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.footer {
+	background: violet;
+	flex-grow: 1;
+}
+
+@media screen and (min-width: 700px) {
+	.content {
+		display: grid;
+		grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
+		grid-template-columns: repeat(3,1fr);
+	}
+
+	.header {
+		grid-column: 1 / span 3;
+	}
+
+	.main {
+		grid-column: 1 / span 2;
+		grid-row: 2 / span 4;
+	}
+
+	.aside {
+		grid-column: 3 / 4;
+		grid-row: 2 / span 4;
+	}
+
+	.footer {
+		grid-column: 1 / span 3;
+		grid-row: 6 / span 1;
+	}
+}
+
+
+/*
+@media screen and (min-width: 700px) {
+	.content {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.header {
+		flex-basis: 100%;
+		height: 60px;
+	}
+
+	.main {
+		flex-grow: 4;
+	}
+
+	.aside {
+		flex-grow: 1;
+	}
+
+	.aside, .main {
+		height: 490px;
+	}
+
+	.footer {
+		flex-basis: 100%;
+	}
+}*/

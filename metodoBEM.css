@@ -1,0 +1,31 @@
+/*
+METODOLOGIA BEM
+C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0
+
+Se basa en el nombre de las clases para saber de que elemento estamos hablando
+Se tiene en cuenta las etiquetas contenedoras
+Y se trabaja en descendencia
+por ej: 
+en html: 
+	<div class="form">
+		<input type="text" class="form--input">
+		<input type="password" class="form--input--active">
+		<input type="text" class="form--input">
+		<input type="text" class="form--input">
+		<input type="text" class="form--input">
+	</div>
+en css: 
+	.form--input {
+		color: red;
+	}
+	.form--input--active {
+		color: green;
+	}
+*/
+.form--input {
+		color: red;
+	}
+.form--input--active {
+		color: green;
+	}
+

@@ -1,0 +1,79 @@
+/*
+PSEUDO-CLASES
+	:HOVER
+	:LINK
+	:VISITED
+	:ACTIVER
+	:FOCUS
+	:LANG
+*/
+* {
+	font-size: 20px;
+	font-family: 'Glory', sans-serif;
+}
+
+b {
+	padding: 10px;
+	margin: 20px;
+	display: inline-block;
+}
+
+:lang(esp) {
+	background: lightblue;
+}
+
+:lang(en) {
+	background: black;
+	color: white;
+}
+
+/*
+.caja4 {
+	margin: 20px;
+	background: grey;
+	transition: all 1s;
+}
+
+.caja4:focus {
+	background: white;
+}
+
+.caja3 {
+	background: blue;
+	height: 250px;
+	width: 250px;
+	margin: 25px;
+	transition: all 1s;
+}
+
+.caja3:active {
+	background: red;
+	width: 500px;
+}
+
+.caja2:link {
+	color: blue;
+	padding: 20px;
+	background: lightblue;
+	display: inline-block;
+}
+
+.caja2:visited {
+	color: black;
+}
+
+a {
+	color: green !important
+}
+
+.caja1 {
+	background: lightblue;
+	padding: 200px;
+	display: inline-block;
+	transition: all 1s;
+}
+
+.caja1:hover {
+	background: blue;
+	padding: 300px;
+}

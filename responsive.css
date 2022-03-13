@@ -1,0 +1,43 @@
+/*
+RESPONSIVE DESIGN
+adaptamos un diseño a varias resoluciones
+adapta una pagina de escritorio para tablets y mobiles
+MOBILE FIRST
+adapta un pagina de movil a una tablet y luego escritorio
+este tiene un mejor SEO
+*/
+* {
+	font-size: 20px;
+	font-family: 'Glory', sans-serif;
+}
+
+div {
+	display: inline-block;
+	width: 49%;
+	padding: 10px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+.caja1 {
+	background: #888;
+}
+
+.caja2 {
+	background: #ddd;
+}
+
+@media only screen and (max-width: 700px){
+
+div {
+	display: block;
+	width: 100%;
+}
+
+}
